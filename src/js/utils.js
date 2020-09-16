@@ -1,0 +1,131 @@
+const imagesLoaded = require('imagesloaded');
+
+// Linear interpolation
+const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+// Gets the mouse position
+const getMousePos = (e) => {
+    let posx = 0;
+    let posy = 0;
+    if (!e) e = window.event;
+    if (e.pageX || e.pageY) {
+        posx = e.pageX;
+        posy = e.pageY;
+    }
+    else if (e.clientX || e.clientY)    {
+        posx = e.clientX + body.scrollLeft + document.documentElement.scrollLeft;
+        posy = e.clientY + body.scrollTop + document.documentElement.scrollTop;
+    }
+    
+    return { x : posx, y : posy }
+};
+
+const calcWinsize = () => {
+    return {width: window.innerWidth, height: window.innerHeight};
+};
+
+// Preload images
+const preloadImages = (selector = 'img') => {
+    return new Promise((resolve) => {
+        imagesLoaded(document.querySelectorAll(selector), resolve);
+    });
+};
+
+// Preload images
+const preloadFonts = (id) => {
+    return new Promise((resolve) => {
+        WebFont.load({
+            typekit: {
+                id: id
+            },
+            active: resolve
+        });
+    });
+};
+
+// https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
+const scrollIt = (destination, duration = 200, easing = 'linear', callback) => {
+    const easings = {
+      linear(t) {
+        return t;
+      },
+      easeInQuad(t) {
+        return t * t;
+      },
+      easeOutQuad(t) {
+        return t * (2 - t);
+      },
+      easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      },
+      easeInCubic(t) {
+        return t * t * t;
+      },
+      easeOutCubic(t) {
+        return (--t) * t * t + 1;
+      },
+      easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+      },
+      easeInQuart(t) {
+        return t * t * t * t;
+      },
+      easeOutQuart(t) {
+        return 1 - (--t) * t * t * t;
+      },
+      easeInOutQuart(t) {
+        return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+      },
+      easeInQuint(t) {
+        return t * t * t * t * t;
+      },
+      easeOutQuint(t) {
+        return 1 + (--t) * t * t * t * t;
+      },
+      easeInOutQuint(t) {
+        return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
+      }
+    };
+  
+    const start = window.pageYOffset;
+    const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+  
+    const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+    const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+    const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+  
+    if ('requestAnimationFrame' in window === false) {
+        window.scroll(0, destinationOffsetToScroll);
+      if (callback) {
+        callback();
+      }
+      return;
+    }
+  
+    function scroll() {
+      const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+      const time = Math.min(1, ((now - startTime) / duration));
+      const timeFunction = easings[easing](time);
+      window.scroll(0, Math.abs(Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start)));
+      if (window.pageYOffset === destinationOffsetToScroll) {
+        if (callback) {
+          callback();
+        }
+        return;
+      }
+  
+      requestAnimationFrame(scroll);
+    }
+  
+    scroll();
+}
+
+export {
+    lerp,
+    getMousePos,
+    calcWinsize,
+    preloadImages, 
+    preloadFonts,
+    scrollIt
+};

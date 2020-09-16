@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Menu to Full Grid Layout | Codrops</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="Codrops">
+		<link rel="shortcut icon" href="favicon.26242483.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/yuz0mhb.css">
+		<link rel="stylesheet" type="text/css" href="base.98fd6c19.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className = "js";
+
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+	</head>
+	<body class="demo-1 loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 511.996 511.996">
+				<title>Arrow left</title>
+				<path d="M462.51 220.392H172.707l67.017-68.342a7.133 7.133 0 00.014-9.956l-39.544-40.612a7.13 7.13 0 00-10.204 0L44.383 251.028a7.128 7.128 0 000 9.941L189.99 410.514c1.338 1.375 3.176 2.15 5.099 2.15s3.76-.775 5.105-2.15l39.544-40.612a7.126 7.126 0 00-.014-9.956l-67.017-68.342H462.51c3.93 0 7.12-3.19 7.12-7.12v-56.97a7.124 7.124 0 00-7.12-7.122z"></path>
+			</symbol>
+		</svg>
+		<main>
+			<div class="frame">
+				<h1 class="frame__title">Menu to Full Grid Layout</h1>
+				<div class="frame__links">
+					<a href="https://tympanus.net/Development/DiagonalThumbnails/">Previous demo</a>
+					<a href="https://tympanus.net/codrops/?p=51021">Article</a>
+					<a href="">GitHub</a>
+				</div>
+			</div>
+			<div class="bg-gallery-wrap">
+				<div class="bg-gallery bg-gallery--1">
+					<img class="bg-gallery__item" src="1.dc197a9a.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="2.3ca6bb44.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="3.a433b89d.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="4.c6d96be5.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="5.689b68fd.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="6.e96dcfff.jpg" alt="Some image">
+				</div>
+				<div class="bg-gallery bg-gallery--2">
+					<img class="bg-gallery__item" src="7.2d66e3ed.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="8.f4323fe0.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="9.c9233dac.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="10.5e22fdc3.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="11.a56b8aeb.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="12.b5a57fd7.jpg" alt="Some image">
+				</div>
+				<div class="bg-gallery bg-gallery--3">
+					<img class="bg-gallery__item" src="13.3858c623.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="14.c732d2b3.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="15.61b13bcc.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="16.39461312.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="17.7c008703.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="18.81a1401f.jpg" alt="Some image">
+				</div>
+				<div class="bg-gallery bg-gallery--4">
+					<img class="bg-gallery__item" src="19.6d803788.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="20.b400b781.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="21.153c3a00.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="22.787cf170.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="23.486b8c96.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="24.fff42ead.jpg" alt="Some image">
+				</div>
+				<div class="bg-gallery bg-gallery--5">
+					<img class="bg-gallery__item" src="25.4550eb4f.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="26.2e93c17c.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="27.4a259712.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="28.1b075856.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="29.474079f1.jpg" alt="Some image">
+					<img class="bg-gallery__item" src="30.e673968d.jpg" alt="Some image">
+				</div>
+			</div>
+			<nav class="menu" id="menu">
+				<div class="menu__headline">
+					<span class="menu__headline-deco"></span>
+					<span class="menu__headline-text"><span>Choose a project</span></span>
+				</div>
+				<a class="menu__item menu__item--selected" href="#content-1">
+					<span class="menu__item-title">Nostalgia</span>
+					<span class="menu__item-deco">|</span>
+					<span class="menu__item-cta"><span>explore</span></span>
+				</a>
+				<a class="menu__item" href="#content-2">
+					<span class="menu__item-title">361 KM</span>
+					<span class="menu__item-deco">|</span>
+					<span class="menu__item-cta"><span>explore</span></span>
+				</a>
+				<a class="menu__item" href="#content-3">
+					<span class="menu__item-title">Moonbox</span>
+					<span class="menu__item-deco">|</span>
+					<span class="menu__item-cta"><span>explore</span></span>
+				</a>
+				<a class="menu__item" href="#content-4">
+					<span class="menu__item-title">Beta Z</span>
+					<span class="menu__item-deco">|</span>
+					<span class="menu__item-cta"><span>explore</span></span>
+				</a>
+				<a class="menu__item" href="#content-5">
+					<span class="menu__item-title">Pink Dream</span>
+					<span class="menu__item-deco">|</span>
+					<span class="menu__item-cta"><span>explore</span></span>
+				</a>
+			</nav>
+			<section class="page page--preview">
+				<div class="content" id="content-1" data-bgcolor="#da9b5b">
+					<a class="content__back" href="#menu" aria-label="Back to menu">
+						<svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg>
+					</a>
+					<h2 class="content__title"><span>Nostalgia</span></h2>
+					<p class="content__intro"><span>A sequential collaboration between Nathan Cutward and Henry Baldimore aiming to capture light.</span></p>
+					<span class="content__date"><span>February, 2020</span></span>
+					<div class="gallery">
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="1.dc197a9a.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Amber Van Cult</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="2.3ca6bb44.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Sky Tone No. 5</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="3.a433b89d.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">From the inside</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="4.c6d96be5.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Lonely Friend</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="5.689b68fd.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Framed Walls</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="6.e96dcfff.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Nesta Gut</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="3.a433b89d.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Brighton Flies</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="2.3ca6bb44.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Never Story</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="1.dc197a9a.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Quilt Fan</figcaption>
+						</figure>
+					</div>
+				</div><!-- /content -->
+				<div class="content" id="content-2" data-bgcolor="#716d6e">
+					<a class="content__back" href="#menu" aria-label="Back to menu">
+						<svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg>
+					</a>
+					<h2 class="content__title"><span>361 KM</span></h2>
+					<p class="content__intro"><span>What is that lighthouse over there? We will find out soon with Terrance Love.</span></p>
+					<span class="content__date"><span>March, 2020</span></span>
+					<div class="gallery">
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="7.2d66e3ed.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Amber Van Cult</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="8.f4323fe0.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Sky Tone No. 5</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="9.c9233dac.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">From the inside</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="10.5e22fdc3.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Lonely Friend</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="11.a56b8aeb.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Framed Walls</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="12.b5a57fd7.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Nesta Gut</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="8.f4323fe0.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Brighton Flies</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="9.c9233dac.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Never Story</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="7.2d66e3ed.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Quilt Fan</figcaption>
+						</figure>
+					</div>
+				</div><!-- /content -->
+				<div class="content" id="content-3" data-bgcolor="#a197da">
+					<a class="content__back" href="#menu" aria-label="Back to menu">
+						<svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg>
+					</a>
+					<h2 class="content__title"><span>Moonbox</span></h2>
+					<p class="content__intro"><span>Nothing short of a miracle. What a surprise to your millenial birthday.</span></p>
+					<span class="content__date"><span>February, 2020</span></span>
+					<div class="gallery">
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="13.3858c623.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Amber Van Cult</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="14.c732d2b3.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Sky Tone No. 5</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="15.61b13bcc.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">From the inside</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="16.39461312.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Lonely Friend</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="17.7c008703.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Framed Walls</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="18.81a1401f.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Nesta Gut</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="13.3858c623.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Brighton Flies</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="15.61b13bcc.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Never Story</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="14.c732d2b3.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Quilt Fan</figcaption>
+						</figure>
+					</div>
+				</div><!-- /content -->
+				<div class="content" id="content-4" data-bgcolor="#d4da97">
+					<a class="content__back" href="#menu" aria-label="Back to menu">
+						<svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg>
+					</a>
+					<h2 class="content__title"><span>Beta Z</span></h2>
+					<p class="content__intro"><span>Pointless you say? Of course, that's the whole idea behind reckless yogurt.</span></p>
+					<span class="content__date"><span>February, 2020</span></span>
+					<div class="gallery">
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="19.6d803788.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Amber Van Cult</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="20.b400b781.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Sky Tone No. 5</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="21.153c3a00.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">From the inside</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="22.787cf170.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Lonely Friend</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="23.486b8c96.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Framed Walls</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="24.fff42ead.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Nesta Gut</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="20.b400b781.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Brighton Flies</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="21.153c3a00.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Never Story</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="19.6d803788.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Quilt Fan</figcaption>
+						</figure>
+					</div>
+				</div><!-- /content -->
+				<div class="content" id="content-5" data-bgcolor="#ce1452">
+					<a class="content__back" href="#menu" aria-label="Back to menu">
+						<svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg>
+					</a>
+					<h2 class="content__title"><span>Pink Dream</span></h2>
+					<p class="content__intro"><span>When you say Pasha, I get excited. But wait for winter, it will blow your mind!</span></p>
+					<span class="content__date"><span>February, 2020</span></span>
+					<div class="gallery">
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="25.4550eb4f.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Amber Van Cult</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="26.2e93c17c.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Sky Tone No. 5</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="27.4a259712.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">From the inside</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="28.1b075856.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Lonely Friend</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="29.474079f1.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Framed Walls</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="30.e673968d.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Nesta Gut</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="26.2e93c17c.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Brighton Flies</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="27.4a259712.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Never Story</figcaption>
+						</figure>
+						<figure class="gallery__figure">
+							<img class="gallery__figure-img" src="25.4550eb4f.jpg" alt="Some image">
+							<figcaption class="gallery__figure-caption">Quilt Fan</figcaption>
+						</figure>
+					</div>
+				</div><!-- /content -->
+			</section><!-- /page -->
+		</main>
+		<svg class="cursor" width="30" height="30" viewBox="0 0 30 30">
+			<circle class="cursor__inner" cx="15" cy="15" r="7.5"></circle>
+		</svg>
+		<script src="https://tympanus.net/codrops/adpacks/cda.js"></script>
+		<script src="js.00a46daa.js"></script>
+	</body>
+</html>
